@@ -770,7 +770,7 @@ footer img{height:34px;width:auto;opacity:.92}
 
 <script>
 // ⚠️ 公開前チェック：GAS_URL が空文字のままでは公開しないこと。未設定だとフォーム送信内容が送信されず、リードが保存されません（サンクス表示は出るため気づきにくい）。GASをデプロイし、下記 GAS_URL に実URLを投入してから公開する。
-var GAS_URL="";
+var GAS_URL="https://script.google.com/macros/s/AKfycbwihIVkZZX2TdxB1g_kcxhk6ydOaEUqhSSAurKHPktRXd7baPURAbVWyr3GdNlFl9w0HA/exec";
 function lpSubmit(e){e.preventDefault();var f=e.target;
   var done=function(){if(typeof lpTrack==='function')lpTrack('form_submit');var c=document.querySelector('.form-card');if(c)c.style.display='none';var t=document.getElementById('lp-thanks');if(t){t.style.display='block';t.scrollIntoView({behavior:'smooth',block:'center'});}};
   if(!GAS_URL){done();return false;}
@@ -782,4 +782,4 @@ document.addEventListener('click',function(e){var a=e.target.closest?e.target.cl
 document.querySelectorAll('details.qa').forEach(function(d){var s=d.querySelector('summary');if(s){s.setAttribute('aria-expanded',d.open?'true':'false');d.addEventListener('toggle',function(){s.setAttribute('aria-expanded',d.open?'true':'false');});}});
 </script>
 </body>
-  </html>
+</html>
